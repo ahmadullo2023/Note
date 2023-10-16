@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "885649022280",
+    "firebase_url": "https://note-app-f5e88-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "note-app-f5e88",
+    "storage_bucket": "note-app-f5e88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885649022280:android:217d93639c0980ec16e77d",
+        "android_client_info": {
+          "package_name": "nemtov.dev.note"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh24w5dNYWJgfHxVe-yeJTglz4cd3I0jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

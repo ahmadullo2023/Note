@@ -55,7 +55,7 @@ class _LanguagePageState extends State<LanguagePage> {
             Align(
               alignment: Alignment(0, 0),
               child: Image.asset(
-                "asset/images/Group 27.png",
+                "assets/images/Group 27.png",
                 height: 350,
                 width: 350,
               ),

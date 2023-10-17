@@ -38,13 +38,13 @@ class _ThemePageState extends State<ThemePage> {
           Align(
             alignment: const Alignment(-0.3, -0.3),
             child: Image.asset(
-              "asset/images/image 4.png",
+              "assets/images/image 4.png",
               height: 300,
             ),
           ),
           Align(
             alignment: const Alignment(0.3, -0.1),
-            child: Image.asset("asset/images/image 5.png", height: 300),
+            child: Image.asset("assets/images/image 5.png", height: 300),
           ),
           Align(
             alignment: const Alignment(0, .7),

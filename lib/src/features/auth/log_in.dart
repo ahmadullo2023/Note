@@ -108,7 +108,7 @@ class _LogInPageState extends State<LogInPage> {
                   ),
                 ),
                 const Spacer(),
-                Image.asset("asset/images/Frame 426.png"),
+                Image.asset("assets/images/Frame 426.png"),
                 const SizedBox(height: 20)
               ],
             ),

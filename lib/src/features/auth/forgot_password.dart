@@ -21,24 +21,24 @@ class _ForgotPageState extends State<ForgotPage> {
         child: Form(
           key: _formKey3,
           child: Padding(
-            padding: EdgeInsets.only(left: 20, right: 20, top: 25),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   AppLocalizations.of(context).forgotpassword,
-                  style: TextStyle(fontSize: 30,
+                  style: const TextStyle(fontSize: 30,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 TextFormField(
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   validator: (value) =>
                       Provider.of<ProFunc>(context, listen: false).emailUp(value/*, box*/),
                   decoration: InputDecoration(
                     filled: true,
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     fillColor: Color(0xFF5B6262),
                     hintText: AppLocalizations.of(context).emailAddress,
                     border: OutlineInputBorder(
@@ -46,7 +46,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Container(
                   width: double.infinity,
                   height: 60,
@@ -62,7 +62,7 @@ class _ForgotPageState extends State<ForgotPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (BuildContext context) => SetPassword(),
+                            builder: (BuildContext context) => const SetPassword(),
                           ),
                         );
                       }
@@ -70,7 +70,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     child: Text(AppLocalizations.of(context).next),
                   ),
                 ),
-                SizedBox(height: 40,)
+                const SizedBox(height: 40,)
               ],
             ),
           ),

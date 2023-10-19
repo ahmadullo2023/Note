@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:note/src/features/auth/widget/sign_in.dart';
 import 'package:note/src/features/auth/widget/sign_up.dart';
 import 'package:provider/provider.dart';
-
 import '../../../service/app_localizations.dart';
 import '../../view/provider.dart';
-
-
 
 class LogInPage extends StatefulWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -103,7 +100,7 @@ class _LogInPageState extends State<LogInPage> {
                       );
                     },
                     children: [
-                      index == 0 ? const SingIn() : SingUp(),
+                      index == 0 ? const SingIn() : const SingUp(),
                     ],
                   ),
                 ),

@@ -100,6 +100,8 @@ class _SingInState extends State<SingIn> {
       ),
     );
   }
+
+
   Future<void> signInWithEmailAndPassword() async {
     await Auth()
         .signInWithEmailAndPassword(

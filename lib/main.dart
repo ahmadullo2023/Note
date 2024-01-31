@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:note/src/app.dart';
-import 'package:note/src/model/notification.dart';
+import 'package:note_app/src/app.dart';
+import 'package:note_app/src/model/notification.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -23,5 +23,8 @@ void main() async {
   if(!Hive.isBoxOpen("EmailPassword")){
     await Hive.openBox("EmailPassword");
   }
-  runApp(App());
+  runApp(const App());
 }
+
+
+

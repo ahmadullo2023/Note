@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../model/language_model.dart';
 
-
 class NotePage extends StatefulWidget {
   final Note? note;
   const NotePage({super.key, this.note});
@@ -10,14 +9,14 @@ class NotePage extends StatefulWidget {
   @override
   State<NotePage> createState() => _NotePageState();
 }
-class _NotePageState extends State<NotePage> {
 
+class _NotePageState extends State<NotePage> {
   TextEditingController titleText = TextEditingController();
   TextEditingController conText = TextEditingController();
 
   @override
-  void initState(){
-    if(widget.note != null){
+  void initState() {
+    if (widget.note != null) {
       titleText = TextEditingController(text: widget.note!.title);
       conText = TextEditingController(text: widget.note!.content);
     }
@@ -41,17 +40,21 @@ class _NotePageState extends State<NotePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          if(titleText.text.isEmpty && conText.text.isEmpty){
+        onPressed: () {
+          if (titleText.text.isEmpty && conText.text.isEmpty) {
             return;
-          }else{
+          } else {
             Navigator.pop(context, [
-              titleText.text, conText.text,
+              titleText.text,
+              conText.text,
             ]);
           }
         },
         backgroundColor: Colors.white,
-        child: const Icon(Icons.save, color: Colors.black,),
+        child: const Icon(
+          Icons.save,
+          color: Colors.black,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
@@ -66,17 +69,17 @@ class _NotePageState extends State<NotePage> {
                     decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: "Enter title of note...",
-                        hintStyle: TextStyle(color: Colors.grey, fontSize: 30)
-                    ),
+                        hintStyle: TextStyle(color: Colors.grey, fontSize: 30)),
                     controller: titleText,
                   ),
                   TextField(
                     maxLines: 6,
                     style: const TextStyle(color: Colors.white, fontSize: 20),
                     decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "This is where your note will be. It’ll \nbe housed here. You’ll save your \nnote here. Type your memories here. \nWrite down your thoughts.",
-                        hintStyle: TextStyle(color: Colors.grey, fontSize: 20)
+                      border: InputBorder.none,
+                      hintText:
+                          "This is where your note will be. It’ll \nbe housed here. You’ll save your \nnote here. Type your memories here. \nWrite down your thoughts.",
+                      hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
                     ),
                     controller: conText,
                   ),

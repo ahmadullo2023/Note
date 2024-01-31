@@ -1,16 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'theme.dart';
 
-class SpleshPage extends StatefulWidget {
-  const SpleshPage({Key? key}) : super(key: key);
+class SplashPage extends StatefulWidget {
+  const SplashPage({Key? key}) : super(key: key);
 
   @override
-  State<SpleshPage> createState() => _SpleshPageState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SpleshPageState extends State<SpleshPage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();

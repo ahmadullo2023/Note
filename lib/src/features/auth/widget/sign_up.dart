@@ -53,7 +53,7 @@ class _SingUpState extends State<SingUp> {
               decoration: InputDecoration(
                 filled: true,
                 hintStyle: TextStyle(color: Colors.grey),
-                fillColor: Color(0xFF5B6262),
+                fillColor: const Color(0xFF5B6262),
                 hintText: AppLocalizations.of(context).emailAddress,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -68,7 +68,7 @@ class _SingUpState extends State<SingUp> {
               decoration: InputDecoration(
                 filled: true,
                 hintStyle: TextStyle(color: Colors.grey),
-                fillColor: Color(0xFF5B6262),
+                fillColor: const Color(0xFF5B6262),
                 hintText: AppLocalizations.of(context).password,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),

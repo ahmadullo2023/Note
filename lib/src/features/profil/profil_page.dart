@@ -1,56 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import '../../../service/app_localizations.dart';
 import '../auth/log_in.dart';
 
-class ProfilPage extends StatefulWidget {
-  const ProfilPage({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key}) : super(key: key);
   @override
-  State<ProfilPage> createState() => _ProfilPageState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
-class _ProfilPageState extends State<ProfilPage> {
+
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profil"),
+        title: const Text("Profil"),
         actions: [
           IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (BuildContext) => LogInPage(),
-                  ),
-                );
-              },
-              icon: Icon(Icons.logout))
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext) => const LogInPage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.logout),
+          ),
         ],
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 20, right: 20),
+        padding: const EdgeInsets.only(left: 20, right: 20),
         child: Column(
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               children: [
-                Icon(Icons.account_circle, size: 100),
-                Text(
+                const Icon(Icons.account_circle, size: 100),
+                const Text(
                   "Your name",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
-                Spacer(),
-                IconButton(onPressed: () {},
-                  icon: Icon(Icons.camera_alt_outlined),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.camera_alt_outlined),
                 ),
-                IconButton(onPressed: () {},
-                  icon: Icon(Icons.create),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.create),
                 )
               ],
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             ValueListenableBuilder(
               valueListenable: Hive.box("openBox").listenable(),
               builder: (context, box, child) {
@@ -78,7 +81,7 @@ class _ProfilPageState extends State<ProfilPage> {
                 );
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 59,
               child: OutlinedButton(
@@ -95,14 +98,20 @@ class _ProfilPageState extends State<ProfilPage> {
                 onPressed: () {},
                 child: const Row(
                   children: [
-                    Text("Language", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),),
+                    Text(
+                      "Language",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                     Spacer(),
                     Icon(Icons.language),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 59,
               child: OutlinedButton(
@@ -119,7 +128,11 @@ class _ProfilPageState extends State<ProfilPage> {
                 onPressed: () {},
                 child: const Row(
                   children: [
-                    Text("Secret notes", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),),
+                    Text(
+                      "Secret notes",
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                    ),
                     Spacer(),
                     Icon(Icons.lock),
                   ],

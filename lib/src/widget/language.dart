@@ -6,7 +6,6 @@ import '../features/auth/log_in.dart';
 import '../model/language_model.dart';
 import '../view/provider.dart';
 
-
 class LanguagePage extends StatefulWidget {
   const LanguagePage({Key? key}) : super(key: key);
 
@@ -15,15 +14,15 @@ class LanguagePage extends StatefulWidget {
 }
 
 List<LanguageModel> languages = [
-  LanguageModel(
+  const LanguageModel(
     languageName: "Uzbek",
     value: "uz",
   ),
-  LanguageModel(
+  const LanguageModel(
     languageName: "Russian",
     value: "ru",
   ),
-  LanguageModel(
+  const LanguageModel(
     languageName: "English",
     value: "en",
   ),
@@ -40,82 +39,83 @@ class _LanguagePageState extends State<LanguagePage> {
   Widget build(BuildContext context) {
     final pressed = Provider.of<ProFunc>(context).pressed;
     return Scaffold(
-        body: Stack(
-          children: [
-            Align(
-              alignment: Alignment(-0.8, -0.9),
-              child: Text(
-                AppLocalizations.of(context).languageApp,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w600,
-                ),
+      body: Stack(
+        children: [
+          Align(
+            alignment: const Alignment(-0.8, -0.9),
+            child: Text(
+              AppLocalizations.of(context).languageApp,
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w600,
               ),
             ),
-            Align(
-              alignment: Alignment(0, 0),
-              child: Image.asset(
-                "assets/images/Group 27.png",
-                height: 350,
-                width: 350,
-              ),
+          ),
+          Align(
+            alignment: const Alignment(0, 0),
+            child: Image.asset(
+              "assets/images/Group 27.png",
+              height: 350,
+              width: 350,
             ),
-            Align(
-              alignment: Alignment(0, .7),
-              child: SizedBox(
-                height: 120,
-                child: CupertinoPicker(
-                  magnification: 1.4,
-                  useMagnifier: true,
-                  itemExtent: 50,
-                  selectionOverlay: const SizedBox(
-                    height: 50,
-                    width: double.infinity,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Divider(),
-                        Divider(),
-                      ],
-                    ),
-                  ),
-                  scrollController: FixedExtentScrollController(initialItem: 1),
-                  onSelectedItemChanged: (int selectedItem) =>
-                      pressed(localeList[selectedItem]),
-                  children: List<Widget>.generate(languages.length, (int index) {
-                    return Center(child: Text(languages[index].languageName));
-                  }),
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment(0, 0.9),
-              child: Padding(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                child: Container(
+          ),
+          Align(
+            alignment: const Alignment(0, .7),
+            child: SizedBox(
+              height: 120,
+              child: CupertinoPicker(
+                magnification: 1.4,
+                useMagnifier: true,
+                itemExtent: 50,
+                selectionOverlay: const SizedBox(
+                  height: 50,
                   width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(60),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Divider(),
+                      Divider(),
+                    ],
                   ),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF36BFFA),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (BuildContext context) => const LogInPage(),
-                        ),
-                      );
-                    },
-                    child: Text(AppLocalizations.of(context).next),
+                ),
+                scrollController: FixedExtentScrollController(initialItem: 1),
+                onSelectedItemChanged: (int selectedItem) =>
+                    pressed(localeList[selectedItem]),
+                children: List<Widget>.generate(languages.length, (int index) {
+                  return Center(child: Text(languages[index].languageName));
+                }),
+              ),
+            ),
+          ),
+          Align(
+            alignment: const Alignment(0, 0.9),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Container(
+                width: double.infinity,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(60),
+                ),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF36BFFA),
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const LogInPage(),
+                      ),
+                    );
+                  },
+                  child: Text(AppLocalizations.of(context).next),
                 ),
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }

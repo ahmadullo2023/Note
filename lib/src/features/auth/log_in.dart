@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note/src/features/auth/widget/sign_in.dart';
-import 'package:note/src/features/auth/widget/sign_up.dart';
+import 'package:note_app/src/features/auth/widget/sign_in.dart';
+import 'package:note_app/src/features/auth/widget/sign_up.dart';
 import 'package:provider/provider.dart';
 import '../../../service/app_localizations.dart';
 import '../../view/provider.dart';
@@ -32,7 +32,7 @@ class _LogInPageState extends State<LogInPage> {
               children: [
                 Text(
                   AppLocalizations.of(context).signInTitle,
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                  style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 35),
                 Container(

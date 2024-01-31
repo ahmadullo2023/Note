@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:note/src/view/provider.dart';
-import 'package:note/src/widget/splash.dart';
+import 'package:note_app/src/view/provider.dart';
+import 'package:note_app/src/widget/splash.dart';
 import 'package:provider/provider.dart';
 import '../service/app_localizations.dart';
+import 'features/home/home_screen.dart';
 
 
 class App extends StatefulWidget {
@@ -31,7 +31,7 @@ class AppState extends State<App> {
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
               locale: local,
-              home: const SpleshPage(),
+              home: const SplashPage(),
             );
           },
         );

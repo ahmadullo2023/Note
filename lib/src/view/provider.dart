@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import '../features/home/home_page.dart';
@@ -106,15 +105,15 @@ class ProFunc extends ChangeNotifier {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("Dalete?"),
+        title: const Text("Dalete?"),
         actions: [
           TextButton(
             onPressed: () {},
-            child: Text("Yes"),
+            child: const Text("Yes"),
           ),
           TextButton(
             onPressed: () {},
-            child: Text("No"),
+            child: const Text("No"),
           ),
         ],
       ),

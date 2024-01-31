@@ -46,7 +46,7 @@ class _SetPasswordState extends State<SetPassword> {
                     ),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 TextFormField(
                   validator: (value) => Provider.of<ProFunc>(context, listen: false)
                       .passwordUp(value),
@@ -100,7 +100,7 @@ class _SetPasswordState extends State<SetPassword> {
                     child: Text(AppLocalizations.of(context).next),
                   ),
                 ),
-                SizedBox(height: 40,)
+                const SizedBox(height: 40)
               ],
             ),
           ),

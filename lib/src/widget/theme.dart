@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-
 import '../../service/app_localizations.dart';
 import 'language.dart';
 
@@ -61,7 +59,7 @@ class _ThemePageState extends State<ThemePage> {
                       },
                       title: Text(
                         AppLocalizations.of(context).theme,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 24,
                         ),

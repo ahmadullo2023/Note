@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/src/features/auth/set_password.dart';
+import 'package:note_app/src/features/auth/set_password.dart';
 import 'package:provider/provider.dart';
 import '../../../service/app_localizations.dart';
 import '../../view/provider.dart';

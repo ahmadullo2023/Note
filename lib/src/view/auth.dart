@@ -17,7 +17,6 @@ class Auth{
   }
 
 
-
   Future<void> createUserWithEmailAndPassword({
     required String email,
     required String password,

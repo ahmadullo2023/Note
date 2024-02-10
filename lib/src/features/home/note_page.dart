@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../model/language_model.dart';
 
 class NotePage extends StatefulWidget {

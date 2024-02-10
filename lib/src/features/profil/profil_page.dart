@@ -35,22 +35,22 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           children: [
             const SizedBox(height: 20),
-            Row(
+             const Row(
               children: [
-                const Icon(Icons.account_circle, size: 100),
-                const Text(
+                 Icon(Icons.account_circle, size: 100),
+                 Text(
                   "Your name",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                 ),
-                const Spacer(),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.camera_alt_outlined),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.create),
-                )
+                // const Spacer(),
+                // IconButton(
+                //   onPressed: () {},
+                //   icon: const Icon(Icons.camera_alt_outlined),
+                // ),
+                // IconButton(
+                //   onPressed: () {},
+                //   icon: const Icon(Icons.create),
+                // )
               ],
             ),
             const SizedBox(height: 40),
@@ -112,33 +112,33 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             const SizedBox(height: 20),
-            SizedBox(
-              height: 59,
-              child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  side: const BorderSide(
-                    width: 1,
-                    color: Colors.white,
-                    style: BorderStyle.solid,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                onPressed: () {},
-                child: const Row(
-                  children: [
-                    Text(
-                      "Secret notes",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-                    ),
-                    Spacer(),
-                    Icon(Icons.lock),
-                  ],
-                ),
-              ),
-            ),
+            // SizedBox(
+            //   height: 59,
+            //   child: OutlinedButton(
+            //     style: OutlinedButton.styleFrom(
+            //       side: const BorderSide(
+            //         width: 1,
+            //         color: Colors.white,
+            //         style: BorderStyle.solid,
+            //       ),
+            //       shape: RoundedRectangleBorder(
+            //         borderRadius: BorderRadius.circular(10),
+            //       ),
+            //     ),
+            //     onPressed: () {},
+            //     child: const Row(
+            //       children: [
+            //         Text(
+            //           "Secret notes",
+            //           style:
+            //               TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            //         ),
+            //         Spacer(),
+            //         Icon(Icons.lock),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

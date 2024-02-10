@@ -103,7 +103,6 @@ Future<void> _showNotification(RemoteMessage message) async {
       priority: Priority.high,
       playSound: true,
       fullScreenIntent: true,
-      // sound: RawResourceAndroidNotificationSound('notification_sound'), // you need to add android -> app -> src -> main -> res -> "raw" new folder
     );
 
     const platformChannelSpecifics = NotificationDetails(

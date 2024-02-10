@@ -3,10 +3,6 @@ import 'package:hive_flutter/adapters.dart';
 import '../../service/app_localizations.dart';
 import 'language.dart';
 
-
-// bool isDark = true;
-
-
 class ThemePage extends StatefulWidget {
   const ThemePage({Key? key}) : super(key: key);
 
@@ -15,11 +11,6 @@ class ThemePage extends StatefulWidget {
 }
 
 class _ThemePageState extends State<ThemePage> {
-  // void changeTheme(bool value) {
-  //   setState(() {
-  //     isDark = value;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
